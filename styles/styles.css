@@ -116,10 +116,14 @@ footer {
     width: 300px;
     /* Establece un ancho fijo para todas las imágenes */
     height: auto;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
     /* Sombra suave en las imágenes */
     border-radius: 5px;
     /* Bordes redondeados para las imágenes */
+}
+
+.slide img:hover {
+    transform: scale(1.1);
 }
 
 /* Estilos para los botones de navegación */
@@ -400,4 +404,21 @@ form button:hover {
   25%, 75% {
     opacity: 1;
   }
+}
+
+.contacto-container .red-social {
+    display: inline-block;
+    margin-right: 10px; /* Ajusta el espacio entre las imágenes según sea necesario */
+}
+
+.contacto-container .red-social img {
+    width: 50px; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: 50px; /* Ajusta la altura de las imágenes según sea necesario */
+    /*border-radius: 50%; /* Hace que las imágenes sean redondas */
+    border: 5px solid rgba(0, 0, 0, 0); /* Agrega un borde blanco a las imágenes */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al hacer hover */
+}
+
+.contacto-container .red-social img:hover {
+    transform: scale(1.2); /* Hace que las imágenes se agranden ligeramente al hacer hover */
 }
