@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="favicon/x-icon" href="images/pokéball.png">
+    <title>Pokémon News</title>
+</head>
+
+<body>
+    <header id="site-header">
+        <button class="cambiar-tema-btn" id="cambiar-tema-btn">Cambiar Tema</button>
+        <script src="scripts/tema.js"></script>
+        <div class="logo">Pokémon News</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#pokédex">Pokédex</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Nuevos Iniciales</h1>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide">
+                    <img src="images/pokemon-quaxly.webp" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="images/pokemon-fuecoco.webp" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="images/pokemon-sprigatito.webp" alt="Imagen 3">
+                </div>
+                <!-- Agrega más slides según sea necesario -->
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="indicator" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+
+        <div class="carousel-nav">
+            <button id="prev-slide-btn" onclick="prevSlide()">Anterior</button>
+            <button id="next-slide-btn" onclick="nextSlide()">Siguiente</button>
+        </div>
+    </section>
+
+    <section id="noticias">
+        <div class="noticias">
+            <article class="noticia">
+                <h2>Nueva Generación de Pokémon Anunciada</h2>
+                <img src="images/iniciales.jpeg" alt="Imagen de la noticia 1">
+                <p>La compañía Pokémon anunció oficialmente el lanzamiento de una nueva generación de Pokémon. Se espera
+                    que esta generación introduzca emocionantes nuevas especies y regiones para explorar. Los
+                    entrenadores de todo el mundo están ansiosos por descubrir qué sorpresas les depara esta nueva
+                    aventura.</p>
+            </article>
+
+            <article class="noticia">
+                <h2>Torneo Pokémon Internacional</h2>
+                <img src="images/torneo.jpg" alt="Imagen de la noticia 2">
+                <p>¡Prepárate para la competencia! El Torneo Pokémon Internacional está a punto de comenzar, reuniendo a
+                    los mejores entrenadores de todo el mundo. Con emocionantes batallas y estrategias innovadoras, este
+                    evento promete ser uno de los más destacados del año para la comunidad Pokémon.</p>
+            </article>
+
+            <!-- Puedes agregar más noticias según sea necesario -->
+
+            <article class="noticia">
+                <h2>Descubrimiento de un Pokémon Legendario</h2>
+                <img src="images/nuevo.webp" alt="Imagen de la noticia 3">
+                <p>Un grupo de investigadores ha anunciado el descubrimiento de un Pokémon legendario nunca antes visto
+                    en la región. Este misterioso Pokémon ha capturado la atención de la comunidad científica y de los
+                    entrenadores, generando especulaciones sobre su origen y habilidades únicas.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="pokédex">
+        <h1>Pokédex</h1>
+        <div class="pokedex-container">
+            <p>Bienvenido a nuestra Pokédex, donde podrás explorar la información de diversos Pokémon. A continuación,
+                encontrarás algunos de los Pokémon más destacados:</p>
+
+            <div class="pokemon">
+                <img src="images/Charizard.png" alt="Charizard">
+                <h2>Charizard</h2>
+                <p>Un Pokémon de tipo Fuego/Volador conocido por su aliento de fuego ardiente.</p>
+            </div>
+
+            <div class="pokemon">
+                <img src="images/Pikachu.png" alt="Pikachu">
+                <h2>Pikachu</h2>
+                <p>La mascota más famosa de Pokémon, Pikachu, es de tipo Eléctrico y tiene un ataque eléctrico muy
+                    poderoso.</p>
+            </div>
+
+            <!-- Agrega más Pokémon según sea necesario -->
+
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <div class="contacto-container">
+            <p>¿Tienes alguna pregunta, comentario o sugerencia? Estamos aquí para ayudarte. Contáctanos a través del
+                formulario o la información de contacto a continuación:</p>
+
+            <form id="miFormulario" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit" id="enviar-btn">Enviar Mensaje</button>
+                <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+                    Mensaje enviado con éxito. Te enviaremos una confirmación por correo electrónico.
+                </div>
+            </form>
+
+            <p>O puedes contactarnos directamente en:</p>
+            <a href="tel:+593992834845 subject:ayuda" target="_blank">
+                <img src="images/phone.png" alt="Phone" width="50">
+            </a>
+            <br>
+            <a href="mailto:juan.canarte@epn.edu.ec? subject:ayuda" target="_blank">
+                <img src="images/mail.png" alt="Email" width="50">
+            </a>
+            <br>
+            <a href="https://www.instagram.com/jdcz11" target="_blank">
+                <img src="images/instagram.png" alt="Instagram" width="50">
+            </a>
+            <br>
+            <a href="https://web.facebook.com/juan.canartezambrano/" target="_blank">
+                <img src="images/facebook.png" alt="Facebook" width="50">
+            </a>
+
+            <div class="mapa-container">
+                <h2>¿Dónde estamos?</h2>
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510611.2463895051!2d-80.53721186320927!3d-1.0484354157195994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902bf2b3349167a5%3A0xb5eb80e513eb7eee!2sPortoviejo!5e0!3m2!1ses-419!2sec!4v1685516245852!5m2!1ses-419!2sec"
+                        width="600" height="450" style="border:2px solid #777" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pokémon News. Todos los derechos reservados.</p>
+    </footer>
+    <script src="scripts/carrusel.js"></script>
+</body>
+<div>
+    <button class="scroll-top-btn" id="scroll-top-btn" onclick="scrollToTop()">Subir</button>
+    <script src="scripts/subir.js"></script>
+    <script src="scripts/header.js"></script>
+</div>
+
+</html>

@@ -1,0 +1,403 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    /* Ajusta la propiedad background-size según sea necesario */
+    background-attachment: fixed;
+    /* Añade el efecto parallax */
+    scroll-behavior: smooth;
+    /* Agrega esta línea para la transición suave */
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#site-header {
+    position: fixed;
+    width: 100%;
+    background-color: black(51, 51, 51, 0.8);
+    /* Establece el fondo con transparencia */
+    padding: 0px;
+    color: white;
+    transition: top 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.9;
+    /* Establece la opacidad del texto */
+}
+
+nav ul li a:hover {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+section {
+    padding: 1px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    /* Establece el fondo con transparencia */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#home {
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding: 20px;
+}
+
+#home h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor del carrusel */
+.carousel-container {
+    width: 100%;
+    /* Ancho del carrusel */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos para cada diapositiva del carrusel */
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para las imágenes en cada diapositiva */
+.slide img {
+    width: 300px;
+    /* Establece un ancho fijo para todas las imágenes */
+    height: auto;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra suave en las imágenes */
+    border-radius: 5px;
+    /* Bordes redondeados para las imágenes */
+}
+
+/* Estilos para los botones de navegación */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-nav button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.carousel-nav button:hover {
+    background: darkorange;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+.noticias {
+    padding: 60px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.noticia {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.noticia img {
+    width: 100%;
+    /* Cambiado a 100% para ocupar todo el ancho de su contenedor */
+    height: 400px;
+    /* Establece la altura deseada, puedes ajustar según sea necesario */
+    object-fit: cover;
+    /* Ajusta el tamaño de la imagen sin deformarla */
+    border-radius: 5px;
+    /* Bordes redondeados para las imágenes */
+}
+
+.noticia img:hover {
+    opacity: 0.7;
+}
+
+.tema-oscuro {
+    background-image: url('../images/amarillo.webp');
+    background-attachment: fixed;
+    /* Añade el efecto parallax */
+}
+
+.tema-claro {
+    background-color: lightslategray;
+    background-attachment: fixed;
+    /* Añade el efecto parallax */
+}
+
+#cambiar-tema-btn {
+    background-color: #FFA500;
+    /* Un tono de naranja, ajusta según tus preferencias */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    cursor: pointer;
+    /* Asegura que el botón esté encima de otros elementos */
+}
+
+#cambiar-tema-btn:hover {
+    background-color: darkorange;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.scroll-top-btn:hover {
+    background-color: darkorange;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Estilos para pantallas más pequeñas (hasta 768px) */
+    .noticia {
+        width: 100%;
+        /* Mostrar noticias en una columna en pantallas más pequeñas */
+    }
+
+    .carousel-nav button {
+        font-size: 12px;
+        /* Reducir el tamaño de fuente de los botones del carrusel */
+    }
+
+    /* Reducir el tamaño del botón de scroll superior en pantallas más pequeñas */
+    .scroll-top-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Reducir el tamaño del botón de cambiar tema en pantallas más pequeñas */
+    #cambiar-tema-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* Estilos para Pokédex Section */
+#pokédex {
+    padding: 80px 0px 0px;
+    text-align: center;
+}
+
+.pokedex-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pokemon {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.pokemon img:hover {
+    transform: scale(1.1);
+}
+
+.pokemon h2 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estilos para Contacto Section */
+#contacto {
+    padding: 80px 10px 80px;
+    text-align: center;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkorange;
+}
+
+.contacto-container p {
+    margin-top: 20px;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mapa-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mapa {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Agrega estos estilos para la animación */
+.mensaje-exito {
+  background-color: #4caf50; /* Color de fondo verde para éxito */
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out; /* Duración y tipo de animación */
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
