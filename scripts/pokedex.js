@@ -3,6 +3,24 @@
     obtenerDatosPokemon('ditto');
 });*/
 
+// Obtén el elemento de entrada de búsqueda y el botón de búsqueda
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('search-button');
+
+// Agrega un evento de escucha para la tecla "Enter" en el campo de búsqueda
+searchInput.addEventListener('keyup', function(event) {
+    // Verifica si la tecla presionada es "Enter"
+    if (event.key === 'Enter') {
+        // Llama a la función buscarPokemon() al presionar "Enter"
+        buscarPokemon();
+    }
+});
+
+// También, puedes agregar un evento de clic al botón de búsqueda
+searchButton.addEventListener('click', function() {
+    buscarPokemon();
+});
+
 function buscarPokemon() {
     // Obtiene el valor de la barra de búsqueda
     const pokemonABuscar = document.getElementById('searchInput').value.toLowerCase();
@@ -42,6 +60,10 @@ function mostrarInfoPokemon(pokemon) {
     // Limpia el contenido actual del contenedor
     contenedorPokemon.innerHTML = '';
 
+    // Crea un contenedor para los elementos del Pokémon
+    const pokemonContainer = document.createElement('div');
+    pokemonContainer.classList.add('pokemon-container');
+
     // Crea elementos para mostrar el nombre y la imagen del Pokémon
     const nombrePokemon = document.createElement('h2');
     nombrePokemon.textContent = `Nombre: ${pokemon.name}`;
@@ -55,14 +77,15 @@ function mostrarInfoPokemon(pokemon) {
 
     const habilidad2Pokemon = document.createElement('h2');
     habilidad2Pokemon.textContent = `Habilidad 2: ${pokemon.abilities[1].ability.name}`;
-    
 
-    // Agrega los elementos al contenedor en la página
-    contenedorPokemon.appendChild(nombrePokemon);
-    contenedorPokemon.appendChild(imagenPokemon);
-    contenedorPokemon.appendChild(habilidadPokemon)
-    contenedorPokemon.appendChild(habilidad2Pokemon)
+    // Agrega los elementos al contenedor del Pokémon
+    pokemonContainer.appendChild(nombrePokemon);
+    pokemonContainer.appendChild(imagenPokemon);
+    pokemonContainer.appendChild(habilidadPokemon);
+    pokemonContainer.appendChild(habilidad2Pokemon);
 
+    // Agrega el contenedor del Pokémon al contenedor principal en la página
+    contenedorPokemon.appendChild(pokemonContainer);
 }
 
 function mostrarError() {

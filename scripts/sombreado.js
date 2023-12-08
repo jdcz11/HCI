@@ -54,7 +54,7 @@ function resetMenuColors() {
 
 function updateColorsOnThemeChange() {
     updateActiveMenuItem();
-    resetMenuColors();
+    setTimeout(resetMenuColors, 50); // Agregamos un pequeño retraso para dar tiempo a que se actualice el tema.
 }
 
 window.addEventListener('scroll', updateActiveMenuItem);

@@ -337,246 +337,268 @@ footer {
 }
 
 
-    /* Estilos para Pokédex Section */
-    #pokédex {
-        padding: 80px 0px 0px;
-        text-align: center;
+/* Estilos para Pokédex Section */
+#pokédex {
+    padding: 80px 0px 0px;
+    text-align: center;
+}
+
+.pokedex-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pokemon {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.pokemon img:hover {
+    transform: scale(1.1);
+}
+
+.pokemon h2 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estilos para Contacto Section */
+#contacto {
+    padding: 80px 10px 80px;
+    text-align: center;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: darkorange;
+}
+
+.contacto-container p {
+    margin-top: 20px;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
-    .pokedex-container {
-        max-width: 800px;
-        margin: 0 auto;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mapa-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mapa {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Agrega estos estilos para la animación */
+.mensaje-exito {
+    background-color: #4caf50;
+    /* Color de fondo verde para éxito */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out;
+    /* Duración y tipo de animación */
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
     }
 
-    .pokemon {
-        margin-top: 20px;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    25%,
+    75% {
+        opacity: 1;
     }
+}
 
-    .pokemon img {
-        max-width: 100%;
-        border-radius: 8px;
-    }
+.contacto-container .red-social {
+    display: inline-block;
+    margin-right: 10px;
+    /* Ajusta el espacio entre las imágenes según sea necesario */
+}
 
-    .pokemon img:hover {
-        transform: scale(1.1);
-    }
+.contacto-container .red-social img {
+    width: 50px;
+    /* Ajusta el ancho de las imágenes según sea necesario */
+    height: 50px;
+    /* Ajusta la altura de las imágenes según sea necesario */
+    /*border-radius: 50%; /* Hace que las imágenes sean redondas */
+    border: 5px solid rgba(0, 0, 0, 0);
+    /* Agrega un borde blanco a las imágenes */
+    transition: transform 0.3s ease-in-out;
+    /* Agrega una transición suave al hacer hover */
+}
 
-    .pokemon h2 {
-        margin-top: 10px;
-        color: #333;
-    }
+.contacto-container .red-social img:hover {
+    transform: scale(1.2);
+    /* Hace que las imágenes se agranden ligeramente al hacer hover */
+}
 
-    /* Estilos para Contacto Section */
-    #contacto {
-        padding: 80px 10px 80px;
-        text-align: center;
-    }
+.nav-menu a.active,
+.nav-menu a:focus {
+    background-color: #FFA500;
+    /* Color de fondo activo o al pasar el ratón */
+    color: white;
+    /* Color del texto activo o al pasar el ratón */
+    transition: background-color 0.3s ease-in-out;
+    /* Agrega una transición suave */
+    position: relative;
+}
 
-    .contacto-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+.nav-menu a.active::before,
+.nav-menu a:hover::before,
+.nav-menu a:focus::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    /* Altura del sombreado */
+    bottom: 0;
+    left: 0;
+    background-color: inherit;
+    /* Color del tema */
+}
 
-    form {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+/* Estilos para los botones "Más información" */
+.mas-info-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ajusta según sea necesario para centrar verticalmente */
+}
 
-    form label {
-        margin-top: 10px;
-        font-weight: bold;
-    }
+.mas-info-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 0px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
 
-    form input,
-    form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+.mas-info-btn:hover {
+    background: darkorange;
+    /* Cambia el color de fondo al pasar el ratón */
+}
 
-    form button {
-        background-color: black;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+.mas-info-btn2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ajusta según sea necesario para centrar verticalmente */
+}
 
-    form button:hover {
-        background-color: darkorange;
-    }
+.mas-info-btn2 {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
 
-    .contacto-container p {
-        margin-top: 20px;
-        color: #333;
-    }
+.mas-info-btn2:hover {
+    background: darkorange;
+    /* Cambia el color de fondo al pasar el ratón */
+}
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
+/* Agrega estilos para centrar el contenedor de Pokémon */
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+.pokemon-container h2 {
+    margin: 10px 0;
+}
 
-    .mapa-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .mapa {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    /* Agrega estos estilos para la animación */
-    .mensaje-exito {
-        background-color: #4caf50;
-        /* Color de fondo verde para éxito */
-        color: #fff;
-        padding: 15px;
-        border-radius: 5px;
-        text-align: center;
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        animation: fadeInOut 3s ease-in-out;
-        /* Duración y tipo de animación */
-    }
-
-    @keyframes fadeInOut {
-
-        0%,
-        100% {
-            opacity: 0;
-        }
-
-        25%,
-        75% {
-            opacity: 1;
-        }
-    }
-
-    .contacto-container .red-social {
-        display: inline-block;
-        margin-right: 10px;
-        /* Ajusta el espacio entre las imágenes según sea necesario */
-    }
-
-    .contacto-container .red-social img {
-        width: 50px;
-        /* Ajusta el ancho de las imágenes según sea necesario */
-        height: 50px;
-        /* Ajusta la altura de las imágenes según sea necesario */
-        /*border-radius: 50%; /* Hace que las imágenes sean redondas */
-        border: 5px solid rgba(0, 0, 0, 0);
-        /* Agrega un borde blanco a las imágenes */
-        transition: transform 0.3s ease-in-out;
-        /* Agrega una transición suave al hacer hover */
-    }
-
-    .contacto-container .red-social img:hover {
-        transform: scale(1.2);
-        /* Hace que las imágenes se agranden ligeramente al hacer hover */
-    }
-
-    .nav-menu a.active,
-    .nav-menu a:focus {
-        background-color: #FFA500;
-        /* Color de fondo activo o al pasar el ratón */
-        color: white;
-        /* Color del texto activo o al pasar el ratón */
-        transition: background-color 0.3s ease-in-out;
-        /* Agrega una transición suave */
-        position: relative;
-    }
-
-    .nav-menu a.active::before,
-    .nav-menu a:hover::before,
-    .nav-menu a:focus::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        /* Altura del sombreado */
-        bottom: 0;
-        left: 0;
-        background-color: inherit;
-        /* Color del tema */
-    }
-
-    /* Estilos para los botones "Más información" */
-    .mas-info-btn-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        /* Ajusta según sea necesario para centrar verticalmente */
-    }
-
-    .mas-info-btn {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        margin-top: 0px;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-
-    .mas-info-btn:hover {
-        background: darkorange;
-        /* Cambia el color de fondo al pasar el ratón */
-    }
-
-    .mas-info-btn2-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        /* Ajusta según sea necesario para centrar verticalmente */
-    }
-
-    .mas-info-btn2 {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        margin-top: 20px;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
-    }
-
-    .mas-info-btn2:hover {
-        background: darkorange;
-        /* Cambia el color de fondo al pasar el ratón */
-    }
-
+.pokemon-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
