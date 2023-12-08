@@ -12,11 +12,10 @@
 <body>
     <header id="site-header">
         <button class="cambiar-tema-btn" id="cambiar-tema-btn">Cambiar Tema</button>
-        <script src="scripts/tema.js"></script>
         <div class="logo">Pokémon News</div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="#home">Inicio</a></li>
+                <li><a href="#home" class="active">Inicio</a></li>
                 <li><a href="#noticias">Noticias</a></li>
                 <li><a href="#pokédex">Pokédex</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -81,7 +80,13 @@
                     en la región. Este misterioso Pokémon ha capturado la atención de la comunidad científica y de los
                     entrenadores, generando especulaciones sobre su origen y habilidades únicas.</p>
             </article>
+
+            <div class="mas-info-btn-container">
+                <button class="mas-info-btn" id="mas-info-btn" onclick="mostrarMasInfo()">Más información</button>
+            </div>
+
         </div>
+
     </section>
 
     <section id="pokédex">
@@ -103,6 +108,9 @@
                     poderoso.</p>
             </div>
 
+            <div class="mas-info-btn-container">
+                <button class="mas-info-btn2" id="mas-info-btn2" onclick="mostrarMasInfo('pokédex')">Más información</button>
+            </div>
             <!-- Agrega más Pokémon según sea necesario -->
 
         </div>
@@ -158,6 +166,9 @@
         <p>&copy; 2023 Pokémon News. Todos los derechos reservados.</p>
     </footer>
     <script src="scripts/carrusel.js"></script>
+    <script src="scripts/tema.js"></script>
+    <script src="scripts/sombreado.js"></script>
+    <script src="scripts/info.js"></script>
 </body>
 <div>
     <button class="scroll-top-btn" id="scroll-top-btn" onclick="scrollToTop()">Subir</button>

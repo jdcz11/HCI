@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pokémon</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Pokédex</title>
+
+</head>
+<body>
+    <header>
+        <button class="inicio-btn" id="inicio-btn" onclick="irAInicio()">Inicio</button>
+        <button class="cambiar-tema-btn" id="cambiar-tema-btn" >Cambiar Tema</button>
+        <div class="logo2">Pokédex</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar Pokémon">
+            <button class="search-btn" id="search-btn" onclick="buscarPokemon()">Buscar</button>
+        </div>
+    </header>
+    <main>
+        <div id="pokemon-info" class="pokemon-container">
+            <div class="pokemon-details">
+            </div>
+            <!-- Puedes agregar más detalles del Pokémon según sea necesario -->
+        </div>
+    </main>
+
+    <script src="scripts/pokedex.js"></script>
+    <script src="scripts/inicio.js"></script>
+    <script src="scripts/tema.js"></script>
+
+</body>
+</html>
