@@ -85,20 +85,6 @@ function cargarTemaGuardado() {
   const temaGuardado = localStorage.getItem('tema');
 
   if (temaGuardado === 'oscuro') {
-    document.body.classList.add('tema-oscuro');
-    cambiarColorBoton('#cambiar-tema-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#scroll-top-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#prev-slide-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#next-slide-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#enviar-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#mas-info-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#mas-info-btn2', 'orange', 'darkorange');
-    cambiarColorBoton('#inicio-btn', 'orange', 'darkorange');
-    cambiarColorBoton('#search-btn', 'orange', 'darkorange');
-
-
-
-  } else if (temaGuardado === 'claro') {
     document.body.classList.add('tema-claro');
     cambiarColorBoton('#cambiar-tema-btn', '#778899', '#4682B4');
     cambiarColorBoton('#scroll-top-btn', '#778899', '#4682B4');
@@ -111,6 +97,18 @@ function cargarTemaGuardado() {
     cambiarColorBoton('#search-btn', '#87CEFA', '#4682B4');
 
 
+
+  } else if (temaGuardado === 'claro') {
+    document.body.classList.add('tema-oscuro');
+    cambiarColorBoton('#cambiar-tema-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#scroll-top-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#prev-slide-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#next-slide-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#enviar-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#mas-info-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#mas-info-btn2', 'orange', 'darkorange');
+    cambiarColorBoton('#inicio-btn', 'orange', 'darkorange');
+    cambiarColorBoton('#search-btn', 'orange', 'darkorange');
 
   }
 }
